@@ -1,15 +1,15 @@
 <?php  
 
 include "conexion.php";
-$consulta="SELECT * FROM deportes";
+$consulta="SELECT * FROM SPORTS";
 $sql=mysqli_query($conexion,$consulta);
 $result=mysqli_num_rows($sql);
 if ($result==0) {
 			echo "no hay respuesta ";
 		}else{
 			while ($data=mysqli_fetch_array($sql)) {
-				 $id=$data["id"];
-			 $name=$data["nombre"];
+				 
+			 $name=$data["name"];
 			 $description=$data["descripcion"];
 			 $history=$data["historia"];
 			}
